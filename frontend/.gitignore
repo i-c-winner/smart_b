@@ -1,0 +1,10 @@
+.next
+node_modules
+.env
+.env.local
+Dockerfile
+.dockerignore
+docker/
+docker-compose.yml
+docker-compose.*.yml
+*.dockerfile
