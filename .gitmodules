@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = git@github.com:i-c-winner/smart_b_back.git
+	url = https://github.com/i-c-winner/smart_b_back.git
 [submodule "frontend"]
 	path = frontend
-	url = git@github.com:i-c-winner/smart_b_front.git
+	url = https://github.com/i-c-winner/smart_b_front.git

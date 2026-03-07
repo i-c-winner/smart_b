@@ -1,8 +1,16 @@
 [phases.setup]
+<<<<<<< HEAD
 nixPkgs = ["python311", "python311Packages.pip", "nodejs_20"]
 
 [phases.install]
 cmds = [
+=======
+nixPkgs = ["python311Full", "nodejs_20"]
+
+[phases.install]
+cmds = [
+  "python3 -m ensurepip --upgrade",
+>>>>>>> test
   "python3 -m pip install --upgrade pip",
   "python3 -m pip install -r backend/requirements.txt",
   "npm --prefix frontend ci"
