@@ -8,6 +8,16 @@
   --border: #d4dce4;
 }
 
+:root[data-theme-mode="dark"] {
+  --bg: #05070b;
+  --surface: #0f1520;
+  --text: #ffffff;
+  --muted: #d5dfef;
+  --accent: #79c0ff;
+  --danger: #ff7b7b;
+  --border: #4f607a;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +27,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: radial-gradient(circle at top left, #e8f0ff, var(--bg) 42%);
   color: var(--text);
+}
+
+:root[data-theme-mode="dark"] body {
+  background: radial-gradient(circle at top left, #0f1a2d, var(--bg) 42%);
 }
 
 a {
@@ -207,6 +221,11 @@ button.secondary:not(.MuiButton-root) {
   color: #0c47a1;
   padding: 4px 10px;
   font-size: 12px;
+}
+
+:root[data-theme-mode="dark"] .badge {
+  background: #1f334f;
+  color: #d7e8ff;
 }
 
 @media (max-width: 768px) {

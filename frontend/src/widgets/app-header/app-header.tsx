@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 import { LogoutButton } from "@/features/auth/logout/logout-button";
 import { getCompanies, getCompanyUsersWithRoles, getProjectUsers, getProjects } from "@/shared/api/domain-api";
 import { useAuth } from "@/shared/lib/auth/auth-context";
+import { useAppThemeMode } from "@/shared/theme/mui-provider";
 
 export function AppHeader() {
   const { currentUser, token, loading } = useAuth();
+  const { mode, toggleMode } = useAppThemeMode();
   const [showSettings, setShowSettings] = useState(false);
   const [settingsLabel, setSettingsLabel] = useState("Settings");
   const [settingsHref, setSettingsHref] = useState("/settings");
@@ -74,7 +76,7 @@ export function AppHeader() {
         >
           SmartB
         </Typography>
-        <Box sx={{ ml: "auto", display: "flex", alignItems: "center", gap: 1 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <Button component={Link} href="/" variant="outlined" size="small" color="inherit">
             Home
           </Button>
@@ -83,6 +85,8 @@ export function AppHeader() {
               {settingsLabel}
             </Button>
           )}
+        </Box>
+        <Box sx={{ ml: "auto", display: "flex", alignItems: "center", gap: 1 }}>
           <Chip
             size="small"
             color="default"
@@ -96,6 +100,16 @@ export function AppHeader() {
               Login
             </Button>
           )}
+          <Button
+            variant="outlined"
+            size="small"
+            color="inherit"
+            onClick={toggleMode}
+            aria-label={mode === "light" ? "Switch to dark theme" : "Switch to light theme"}
+            sx={{ minWidth: 36, px: 1 }}
+          >
+            {mode === "light" ? "🌙" : "☀️"}
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>
