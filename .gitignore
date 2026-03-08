@@ -6,3 +6,28 @@ docker-compose.yml
 docker-compose.*.yml
 *.dockerfile
 
+# OS / IDE
+.DS_Store
+**/.idea/
+
+# Python cache / tooling
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Python envs
+backend/.venv/
+backend/venv/
+
+# Frontend build / deps
+frontend/node_modules/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+frontend/.turbo/
+
+# Logs
+*.log

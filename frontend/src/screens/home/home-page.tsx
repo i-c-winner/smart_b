@@ -209,6 +209,15 @@ export function HomePage() {
             });
             graphLinks.push({ source: companyId, target: projectId });
 
+            const presentNodeId = `present-project-${project.id}`;
+            graphNodes.push({
+              id: presentNodeId,
+              name: "present",
+              category: 1,
+              symbolSize: 34
+            });
+            graphLinks.push({ source: projectId, target: presentNodeId, value: "present" });
+
             const projectUsers = await getProjectUsers(token, project.id).catch(() => []);
             for (const role of projectUsers) {
               const userId = `user-${role.id}`;
@@ -444,6 +453,10 @@ export function HomePage() {
           const taskId = rawId.replace("task-", "");
           if (!taskId) return;
           router.push(`/tasks/${taskId}`);
+          return;
+        }
+        if (rawId.startsWith("present-project-")) {
+          router.push("/present");
           return;
         }
         if (rawId.startsWith("user-")) {
