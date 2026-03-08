@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 import { AuthProvider } from "@/shared/lib/auth/auth-context";
 import { MuiProvider } from "@/shared/theme/mui-provider";

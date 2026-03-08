@@ -68,6 +68,22 @@ export function MuiProvider({ children }: PropsWithChildren) {
       },
       shadows: Array(25).fill("none") as Shadows,
       components: {
+        MuiCssBaseline: {
+          styleOverrides: {
+            "html, body, #__next": {
+              minHeight: "100%"
+            },
+            body: {
+              margin: 0,
+              background: isDark
+                ? "radial-gradient(circle at top left, #0f1a2d, #05070b 42%)"
+                : "radial-gradient(circle at top left, #e8f0ff, #f2f5f8 42%)"
+            },
+            a: {
+              color: "inherit"
+            }
+          }
+        },
         MuiPaper: {
           styleOverrides: {
             root: {
