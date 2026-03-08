@@ -80,6 +80,9 @@ export function AppHeader() {
           <Button component={Link} href="/" variant="outlined" size="small" color="inherit">
             Home
           </Button>
+          <Button component={Link} href="/present" variant="outlined" size="small" color="inherit">
+            Present
+          </Button>
           {showSettings && (
             <Button component={Link} href={settingsHref} variant="outlined" size="small" color="inherit">
               {settingsLabel}
