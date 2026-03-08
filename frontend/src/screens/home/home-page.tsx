@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Box, Button, CircularProgress, Container, Dialog, DialogContent, DialogTitle, FormControl, InputLabel, MenuItem, Paper, Select, Stack, TextField, Typography, useTheme } from "@mui/material";
+import { Alert, Box, Button, CircularProgress, Container, Dialog, DialogContent, DialogTitle, FormControl, InputLabel, MenuItem, Paper, Select, Stack, TextField, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -47,8 +47,6 @@ type GraphUserInfo = {
 };
 
 export function HomePage() {
-  const muiTheme = useTheme();
-  const isDarkMode = muiTheme.palette.mode === "dark";
   const router = useRouter();
   const { token, loading } = useAuth();
   const chartRef = useRef<HTMLDivElement | null>(null);
@@ -386,8 +384,7 @@ export function HomePage() {
             itemHeight: 10,
             itemGap: 14,
             textStyle: {
-              fontSize: 12,
-              color: isDarkMode ? "#e2e8f0" : "#12202f"
+              fontSize: 12
             }
           }
         ],
@@ -430,12 +427,10 @@ export function HomePage() {
               show: true,
               position: "right",
               formatter: "{b}",
-              fontSize: 11,
-              color: isDarkMode ? "#f8fafc" : "#12202f"
+              fontSize: 11
             },
             edgeLabel: {
               show: true,
-              color: isDarkMode ? "#dbeafe" : "#2f3f52",
               formatter: (params: { data?: { value?: string } }) => params.data?.value ?? ""
             }
           }
@@ -491,7 +486,7 @@ export function HomePage() {
       chart?.dispose();
       chartInstanceRef.current = null;
     };
-  }, [displayNodes, displayLinks, categories, router, usersByNodeId, isDarkMode]);
+  }, [displayNodes, displayLinks, categories, router, usersByNodeId]);
 
   return (
     <Container
