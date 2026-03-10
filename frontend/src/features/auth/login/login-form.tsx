@@ -72,6 +72,25 @@ export function LoginForm() {
           </Button>
         </Box>
       </Stack>
+      <Stack spacing={1} sx={{ mt: 2 }}>
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Typography variant="body2" color="text.secondary"> admin Company: testadmin@test.ru </Typography>
+        </Stack>
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Typography variant="body2" color="text.secondary"> admin Project: pluhin@test.ru </Typography>
+        </Stack>
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Typography variant="body2" color="text.secondary"> member: pulkin@test.ru </Typography>
+        </Stack>
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Typography variant="body2" color="text.secondary"> member: blohin@test.ru </Typography>
+        </Stack>
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Typography variant="body2" color="text.secondary"> member: petrob@test.ru </Typography>
+        </Stack>
+        <Typography variant="body2" color="error">Password для каждого: test</Typography>
+
+      </Stack>
     </Paper>
   );
 }
