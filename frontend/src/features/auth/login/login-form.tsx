@@ -77,7 +77,7 @@ export function LoginForm() {
           <Typography variant="body2" color="text.secondary"> admin Company: testadmin@test.ru </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
-          <Typography variant="body2" color="text.secondary"> admin Project: pluhin@test.ru </Typography>
+          <Typography variant="body2" color="text.secondary"> admin Project: petrov@test.ru </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
           <Typography variant="body2" color="text.secondary"> member: pulkin@test.ru </Typography>
@@ -86,7 +86,7 @@ export function LoginForm() {
           <Typography variant="body2" color="text.secondary"> member: blohin@test.ru </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
-          <Typography variant="body2" color="text.secondary"> member: petrov@test.ru </Typography>
+          <Typography variant="body2" color="text.secondary"> member: pluhin@test.ru </Typography>
         </Stack>
         <Typography variant="body2" color="error">Password для каждого: test</Typography>
 
