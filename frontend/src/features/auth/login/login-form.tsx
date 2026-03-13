@@ -80,7 +80,7 @@ export function LoginForm() {
           <Typography variant="body2" color="text.secondary"> admin Project: petrov@test.ru </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
-          <Typography variant="body2" color="text.secondary"> member: pulkin@test.ru </Typography>
+          <Typography variant="body2" color="text.secondary"> member: palkin@test.ru </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
           <Typography variant="body2" color="text.secondary"> member: blohin@test.ru </Typography>
